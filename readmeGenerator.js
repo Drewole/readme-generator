@@ -16,7 +16,8 @@ let licenseChosen = ""
 	let finalDoc = `
 
 # ${answers.projectTitle}
-========================\t
+========================
+\n
 ![Screenshot or Gif of the app.](./assets/screenshot.${answers.fileExtension})
 
 ### Description
