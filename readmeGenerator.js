@@ -17,7 +17,7 @@ let licenseChosen = ""
 
 # ${answers.projectTitle}
 ========================\t
-![Screenshot or Gif of the app.](./assets/screenshot${answers.fileExtension})
+![Screenshot or Gif of the app.](./assets/screenshot.${answers.fileExtension})
 
 ### Description
 ${answers.description}
