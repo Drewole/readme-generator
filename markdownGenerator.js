@@ -7,7 +7,7 @@ Project Title
 ### Description
 This will be the description
 
-
+* [Description](#Description) // This is a MD link bud
 
 #### Have Questions?
 Please [Email Me](olsenj.andrew@gmail.com)
@@ -23,3 +23,15 @@ module.exports = {
 	pie,
 	predictable,
 };
+
+/* //////sections needed
+Description
+Table of Contents
+Installation
+Usage
+License
+Contributing
+Tests
+Questions
+
+*/

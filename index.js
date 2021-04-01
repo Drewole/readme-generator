@@ -18,8 +18,10 @@ WHEN I enter my GitHub username
 THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
 WHEN I enter my email address
 THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
+
 ///////Questions to Collect
 1.Project Title
 2.Description
@@ -82,18 +84,24 @@ const questions = [
 	},
 	{
 		type: 'list',
-		message: 'License Type',
+		message: 'Choose License Type',
+		choices: ["MIT", "APACHE", "MOZILLA PUBLIC LICENSE 2.0", "GNU GPL v2", "THE UNLICENSE" ],
 		name: 'license',
 	},
 	{
-		type: 'editor',
-		message: 'Installation instructions',
-		name: 'installation',
+		type: 'input',
+		message: 'Contribution Guidelines',
+		name: 'contribute',
 	},
 	{
-		type: 'editor',
+		type: 'input',
 		message: 'Usage Information',
-		name: 'usageInfo',
+		name: 'usage',
+	},
+	{
+		type: 'input',
+		message: 'Test Instructions',
+		name: 'testInstructions',
 	}
 	
 ]
