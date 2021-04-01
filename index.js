@@ -1,6 +1,6 @@
 const inquirer = require('inquirer')
 const fs = require('fs');
-const { userInfo } = require('os');
+
 
 /*
 Acceptance Criteria
@@ -33,22 +33,23 @@ Not sure if I should wrap the entire thing in template literals, try and see.
 Lets add stuff to auto find gif or png screenshot in assets folder
 
 
-//Here are the licenses
-MIT
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-APACHE
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-MOZILLA PUBLIC LICENSE 2.0
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-THE UNLICENSE
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-GNU GPL v2
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 
-
-Need to figure out how to create a table in .md
+// Here is the logic for the license selection
 */
+// if ('MIT') {
+// 	`[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+// }else if('APACHE') {
+// 	`[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+// }else if('MOZILLA PUBLIC LICENSE 2.0'){
+// 	`[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+// }else if ('THE UNLICENSE') {
+// 	`[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
+// }else if ('GNU GPL v2'){
+// 	`[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
+// } else {
+// 	`[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+// }
 
 /* //////sections needed
 Description
@@ -59,8 +60,6 @@ License
 Contributing
 Tests
 Questions
-
-
 
 */
 
@@ -136,5 +135,5 @@ inquirer
 
 
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
