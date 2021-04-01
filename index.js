@@ -1,5 +1,6 @@
 const inquirer = require('inquirer')
 const fs = require('fs');
+const makeReadme = require('./readmeGenerator');
 
 
 /*
@@ -22,46 +23,12 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 
-///////Questions to Collect
-1.Project Title
-2.Description
-3.Installation section should be a default, with just some minor adjustments
-4.Github username. have default githuburl, just get username
-5.Email
-6.List of options for license.
 
-Initial Thoughts:
-Not sure if I should wrap the entire thing in template literals, try and see.
+Expansion Thoughts:
+Set of choices starting of what you want to include.
+Set of default installation instructions that could be selected from, and then will be put in numbered list in the doc
 Lets add stuff to auto find gif or png screenshot in assets folder
 
-
-
-
-// Here is the logic for the license selection
-*/
-// if ('MIT') {
-// 	`[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-// }else if('APACHE') {
-// 	`[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
-// }else if('MOZILLA PUBLIC LICENSE 2.0'){
-// 	`[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
-// }else if ('THE UNLICENSE') {
-// 	`[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
-// }else if ('GNU GPL v2'){
-// 	`[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
-// } else {
-// 	`[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-// }
-
-/* //////sections needed
-Description
-Table of Contents
-Installation
-Usage
-License
-Contributing
-Tests
-Questions
 
 */
 
@@ -71,6 +38,11 @@ const questions = [
 		type: 'input',
 		message: 'Project Title',
 		name: 'projectTitle',
+	},
+	{
+		type: 'input',
+		message: 'Screenshot File Extension',
+		name: 'fileExtension',
 	},
 	{
 		type: 'editor',
@@ -102,6 +74,16 @@ const questions = [
 		type: 'input',
 		message: 'Test Instructions',
 		name: 'testInstructions',
+	},
+	{
+		type: 'input',
+		message: 'Git Username',
+		name: 'gitUsername',
+	},
+	{
+		type: 'input',
+		message: 'Email Address',
+		name: 'email',
 	}
 	
 ]
@@ -109,16 +91,17 @@ const questions = [
 
 
 
-// fs.appendFile(userInfo.txt, 'data to append', (err) => {
 
-// })
-
-inquirer
+function init() {
+	inquirer
 	.prompt(questions)
 
 
 	.then(answers => {
-		console.log(answers)
+		// console.log(makeReadme(answers))
+		fs.appendFile("README.md", makeReadme(answers, '\t'), (err) => {
+			console.log(`File could not be written due to ${err}`)	
+		})
 		
 	})
 	.catch(error => {
@@ -128,6 +111,8 @@ inquirer
 			// Something else went wrong
 		}
 	});
+}
+
 
 
 
@@ -144,4 +129,4 @@ inquirer
 
 
 // // Function call to initialize app
-// init();
+init();
