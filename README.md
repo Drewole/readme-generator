@@ -1,7 +1,10 @@
 # Node Readme Generator
 
-========================
+========================\
 ![Screenshot or Gif of the app.](./assets/screenshot.gif)
+
+[Link to Video](https://drive.google.com/file/d/1RM742VcZ9H5-l1FdhxNtGYmrYiBs7yMt/view)
+
 
 ### Description
 
